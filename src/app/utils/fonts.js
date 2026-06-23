@@ -1,82 +1,56 @@
-import localFont from 'next/font/local'
+import localFont from "next/font/local";
 
 
 const yekan = localFont({
     src: [
         {
             path: "../../../public/fonts/YekanBakhMedium.woff",
-            style: "normal"
-        },
-        {
-            path: "../../../public/fonts/YekanBakhHeavy.woff",
-            style: "normal"
+            style: "normal",
+            weight: "100",
         },
         {
             path: "../../../public/fonts/YekanBakhBold.woff",
-            style: "normal"
+            style: "normal",
+            weight: "600",
         },
-    ]
+        {
+            path: "../../../public/fonts/YekanBakhHeavy.woff",
+            style: "normal",
+            weight: "700",
+        },
+
+    ],
+    variable: "--font-yekan"
 });
 const vazir = localFont({
     src: [
         {
-            path: "../../../public/fonts/Vazirmatn[wght].woff2",
-            style: "normal"
-        },
-        {
-            path: "../../../public/fonts/Vazirmatn[wght].woff2",
-            style: "normal"
-        },
-        {
-            path: "../../../public/fonts/Vazirmatn-Thin.woff2",
-            style: "normal"
-        },
-        {
-            path: "../../../public/fonts/Vazirmatn-SemiBold.woff2",
-            style: "normal"
-        },
-        {
-            path: "../../../public/fonts/Vazirmatn-SemiBold.woff2",
-            style: "normal"
-        },
-        {
-            path: "../../../public/fonts/Vazirmatn-Regular.woff2",
-            style: "normal"
-        },
-        {
-            path: "../../../public/fonts/Vazirmatn-Medium.woff2",
-            style: "normal"
+            path: "../../../public/fonts/Vazirmatn-ExtraLight.woff2",
+            style: "normal",
+            weight: "100"
         },
         {
             path: "../../../public/fonts/Vazirmatn-Light.woff2",
-            style: "normal"
+            style: "normal",
+            weight: "200"
         },
         {
-            path: "../../../public/fonts/Vazirmatn-ExtraLight.woff2",
-            style: "normal"
+            path: "../../../public/fonts/Vazirmatn-Regular.woff2",
+            style: "normal",
+            weight: "300"
         },
         {
-            path: "../../../public/fonts/Vazirmatn-ExtraBold.woff2",
-            style: "normal"
+            path: "../../../public/fonts/Vazirmatn-Medium.woff2",
+            style: "normal",
+            weight: "400"
         },
         {
             path: "../../../public/fonts/Vazirmatn-Bold.woff2",
-            style: "normal"
+            style: "normal",
+            weight: "500"
         },
-        {
-            path: "../../../public/fonts/Vazirmatn-Black.woff2",
-            style: "normal"
-        },
-        {
-            path: "../../../public/fonts/iranyekanwebregular.woff",
-            style: "normal"
-        },
-        {
-            path: "../../../public/fonts/iranyekanwebmedium.woff",
-            style: "normal"
-        },
-
-    ]
+    ],
+    variable: "--font-vazir"
 });
 
 export { yekan, vazir };
