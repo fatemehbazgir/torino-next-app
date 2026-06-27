@@ -10,7 +10,8 @@ import CheckOtpModal from '../template/CheckOtpModal'
 
 function Header() {
     const [step, setStep] = useState(0);
-    const [code, setCode] = useState("")
+    const [code, setCode] = useState("");
+    const [mobile, setMobile] = useState("");
 
     return (
         <>
@@ -36,8 +37,8 @@ function Header() {
 
                 </div>
             </div>
-            {step === 1 && <SendOtpModal setStep={setStep} />}
-            {step === 2 && <CheckOtpModal setStep={setStep} code={code} setCode={setCode}  />}
+            {step === 1 && <SendOtpModal setStep={setStep} setMobile={setMobile} setCode={setCode} />}
+            {step === 2 && <CheckOtpModal setStep={setStep} code={code} setCode={setCode} mobile={mobile} />}
         </>
     )
 }
