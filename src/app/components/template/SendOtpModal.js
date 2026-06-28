@@ -4,6 +4,9 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { loginUserSchema } from "../../../../schema/LoginForm";
 import api from "../../../../configs/api";
 
+import styles from "./SendOtpModal.module.css"
+import { e2p } from "@/app/utils/numbers";
+
 function SendOtpModal({ setStep, setMobile, setCode }) {
     const {
         register,
@@ -28,16 +31,16 @@ function SendOtpModal({ setStep, setMobile, setCode }) {
         }
     };
     return (
-        <div>
-            <div>
-                <div onClick={() => setStep(0)}><Image src="/images/close.png" width={24} height={24} alt="close icon" /></div>
+        <div className={styles.container}>
+            <div className={styles.box}>
+                <div className={styles.close} onClick={() => setStep(0)}><Image src="/images/close.png" width={24} height={24} alt="close icon" /></div>
                 <p>ورود به تورینو</p>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <label>شماره موبایل خود را وارد کنید</label>
-                    <input placeholder="4253***0912" {...register("mobile")} />
-                    {errors.mobile && <span>لطفا شماره موبایل معتبر وارد کنید</span>}
+                    <input placeholder={e2p("4253***0912")} {...register("mobile")} />
+                    {errors.mobile && <span>لطفا شماره موبایل معتبر وارد کنید!</span>}
 
-                    <input type="submit" />
+                    <button type="submit">ارسال کد تایید</button>
                 </form>
             </div>
         </div>

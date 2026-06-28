@@ -1,0 +1,83 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(1.8px);
+  background-color: #00000050;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 561px;
+  height: 362px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 1);
+}
+.close {
+  text-align: left;
+}
+.close img {
+  margin-top: 12px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.box p {
+  font-weight: 600;
+  font-size: 28px;
+  text-align: center;
+  margin-top: 10px;
+}
+.box form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 35px;
+}
+.box form label {
+  width: 491px;
+  margin: auto;
+  margin-bottom: 12px;
+  font-family: var(--font-vazir);
+  font-weight: 200;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 1);
+}
+.box form input {
+  width: 491px;
+  height: 54px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 8px;
+  margin: auto;
+  font-size: 15px;
+  font-weight: 500;
+}
+.box form input:focus {
+  outline: none;
+}
+
+.box form button {
+  width: 491px;
+  height: 54px;
+  border-radius: 6px;
+  padding: 8px;
+  margin: auto;
+  background: rgba(40, 167, 69, 1);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  font-family: var(--font-vazir);
+  font-weight: 300;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 1);
+  margin-top: 35px;
+  cursor: pointer;
+}
+.box form span{
+   width: 491px;
+  margin: auto;
+  margin-top: 5px;
+  color: red;
+  font-size: 14px;
+}
