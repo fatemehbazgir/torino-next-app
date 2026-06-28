@@ -5,8 +5,10 @@ import React, { useEffect, useState } from 'react'
 import OtpInput from 'react18-input-otp'
 import api from '../../../../configs/api'
 import { checkOtp } from '../../../../services/auth'
+import setCookie from '@/app/utils/cookie'
 
 function CheckOtpModal({ code, setCode, mobile, setStep }) {
+ 
   const [timeLeft, setTimeLeft] = useState(120)
 
   useEffect(() => {
@@ -37,7 +39,9 @@ function CheckOtpModal({ code, setCode, mobile, setStep }) {
     const { response, error } = await checkOtp(mobile, code)
 
     if (response) {
-      console.log(response);
+      setCookie(response.data);
+      setStep(0);
+
     }
     if (error) {
       console.log(error);
