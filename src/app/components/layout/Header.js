@@ -1,23 +1,29 @@
-"use client"
+"use client";
 
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import styles from "./Header.module.css"
 import SendOtpModal from '../template/SendOtpModal'
 import CheckOtpModal from '../template/CheckOtpModal'
+import { getCookie } from '@/app/utils/cookie'
+import api from '../../../../configs/api';
 
 function Header() {
     const [step, setStep] = useState(0);
     const [code, setCode] = useState("");
     const [mobile, setMobile] = useState("");
 
+    // useEffect(() => {
+    //     api.get("/user/profile").then(res => console.log(res));
+    // }, [])
+
     return (
         <>
             <div className={styles.header}>
                 <div className={styles.navbar}>
-                    <Link href="/"><Image src="/images/Torino-logo.png" width={146} height={44} alt='Torino Logo' /></Link>
+                    <Link href="/"><Image priority src="/images/Torino-logo.png" width={146} height={44} alt='Torino Logo' /></Link>
 
                     <ul>
                         <li><Link href="/">صفحه اصلی</Link></li>

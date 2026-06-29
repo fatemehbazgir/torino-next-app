@@ -17,7 +17,6 @@ export default function Home() {
 
   return (
     <div>
-
       <h1>تورینو</h1>
       <ul>
         {data?.map((tour) => (
