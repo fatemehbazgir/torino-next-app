@@ -7,7 +7,6 @@ import React, { useEffect, useState } from 'react'
 import styles from "./Header.module.css"
 import SendOtpModal from '../template/SendOtpModal'
 import CheckOtpModal from '../template/CheckOtpModal'
-import { getCookie } from '@/app/utils/cookie'
 import api from '../../../../configs/api';
 
 function Header() {
@@ -15,9 +14,9 @@ function Header() {
     const [code, setCode] = useState("");
     const [mobile, setMobile] = useState("");
 
-    // useEffect(() => {
-    //     api.get("/user/profile").then(res => console.log(res));
-    // }, [])
+    useEffect(() => {
+        api.get("/user/profile").then(res => console.log(res));
+    }, [])
 
     return (
         <>
