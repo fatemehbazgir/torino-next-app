@@ -8,15 +8,29 @@ import styles from "./Header.module.css"
 import SendOtpModal from '../template/SendOtpModal'
 import CheckOtpModal from '../template/CheckOtpModal'
 import api from '../../../../configs/api';
+import DropDown from '../module/DropDown';
+import { e2p } from '@/app/utils/numbers';
 
-function Header() {
+
+
+function Header({ token }) {
+
+
     const [step, setStep] = useState(0);
     const [code, setCode] = useState("");
     const [mobile, setMobile] = useState("");
+    const [profile, setProfile] = useState("");
+    const [isOpen, setIsOpen] = useState(false);
+    const closeDropDown = () => setIsOpen(false);
 
     useEffect(() => {
-        api.get("/user/profile").then(res => console.log(res));
-    }, [])
+
+        api.get("/user/profile")
+            .then((res) => setProfile(res.data))
+            .catch((error) => console.log(error))
+    }, []);
+
+
 
     return (
         <>
@@ -32,16 +46,29 @@ function Header() {
                     </ul>
 
                 </div>
+                {
+                    token ? (
+                        <>
+                            <div className={styles.profile}>
+                                <Image src="/images/profile.png" width={24} height={24} alt='user profile' />
+                                <span>{profile.mobile && e2p(profile.mobile)}</span>
+                                <Image onClick={() => setIsOpen(true)} src="/images/Vector.png" width={16} height={8} alt="arrow-down" />
+                            </div>
 
-                <div className={styles.headerButtons}>
-                    <Image src="/images/profile.png" width={24} height={24} alt='user profile' />
-                    <button onClick={() => setStep(1)}>
-                        ورود |
-                    </button>
-                    <button> ثبت نام</button>
+                        </>
+                    ) : (
+                        <div className={styles.headerButtons}>
+                            <Image src="/images/profile.png" width={24} height={24} alt='user profile' />
+                            <button onClick={() => setStep(1)}>
+                                ورود |
+                            </button>
+                            <button> ثبت نام</button>
+                        </div>
+                    )
+                }
 
-                </div>
             </div>
+            {isOpen && <DropDown profile={profile} onClose={closeDropDown} />}
             {step === 1 && <SendOtpModal setStep={setStep} setMobile={setMobile} setCode={setCode} />}
             {step === 2 && <CheckOtpModal setStep={setStep} code={code} setCode={setCode} mobile={mobile} />}
         </>

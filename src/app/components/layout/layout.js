@@ -1,10 +1,19 @@
 import Footer from './Footer'
 import Header from './Header'
+import { cookies } from 'next/headers';
 
-function Layout({ children }) {
+async function Layout({ children }) {
+
+
+    const cookieStore = await cookies();
+    const token = cookieStore.get("accessToken")?.value;
+
+
+
+
     return (
         <>
-            <Header />
+            <Header token={token} />
             {children}
             <Footer />
         </>

@@ -8,8 +8,14 @@ import { checkOtp } from '../../../../services/auth'
 import setCookie from '@/app/utils/cookie'
 import styles from "./CheckOtpModal.module.css"
 import { e2p } from '@/app/utils/numbers'
+import { useRouter } from 'next/navigation';
+
 
 function CheckOtpModal({ code, setCode, mobile, setStep }) {
+  const router = useRouter();
+
+  const time = new Date();
+  time.setSeconds(time.getSeconds() + 120);
 
   const [timeLeft, setTimeLeft] = useState(120)
 
@@ -30,7 +36,8 @@ function CheckOtpModal({ code, setCode, mobile, setStep }) {
       const res = await api.post("/auth/send-otp", {
         mobile
       });
-      setCode(res.data.code)
+      setCode(res.data.code);
+
     } catch (error) {
       if (error) return error
     }
@@ -43,8 +50,11 @@ function CheckOtpModal({ code, setCode, mobile, setStep }) {
     if (response) {
       setCookie(response.data);
       setStep(0);
+      router.refresh();
+      window.location.href = '/'
 
     }
+
     if (error) {
       console.log(error);
     }

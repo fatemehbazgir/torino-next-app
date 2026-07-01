@@ -49,3 +49,24 @@
   margin-right: 6px;
   cursor: pointer;
 }
+.profile{
+  width: 156px;
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 100%;
+  color: rgba(40, 167, 69, 1);
+}
+.profile span{
+  font-family: var(--font-vazir);
+  font-weight: 400;
+  font-size: 18px;
+  margin: 0 8px;
+}
+.profile img{
+  margin-top: 2px;
+}
+.profile img:last-child{
+  cursor: pointer;
+}

@@ -16,6 +16,7 @@
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-hook-form": "^7.80.0",
+    "react-timer-hook": "^4.0.6",
     "react18-input-otp": "^1.1.4",
     "yup": "^1.7.1"
   },

@@ -1,0 +1,77 @@
+.container {
+  width: 240px;
+  height: 152px;
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 1);
+  position: absolute;
+  left: 70px;
+  top: 65px;
+  box-shadow: 0px 0px 3px 0.5px rgba(0, 0, 0, 0.25);
+}
+
+.mobileProfile {
+  display: flex;
+  align-items: center;
+  line-height: 100%;
+  padding: 2px 12px;
+  background: rgba(244, 244, 244, 1);
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+  height: 44px;
+}
+.mobileProfile div {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(217, 217, 217, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 100%;
+  margin-left: 10px;
+}
+.mobileProfile span {
+  font-family: var(--font-vazir);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: rgba(16, 65, 27, 1);
+}
+.userProfile {
+  display: flex;
+  align-items: center;
+  line-height: 100%;
+  padding: 2px 12px;
+  height: 52px;
+}
+.userProfile img {
+  margin-left: 8px;
+}
+.userProfile a {
+  font-size: 15px;
+  color: rgba(40, 40, 40, 1);
+  line-height: 100%;
+}
+.line {
+  display: block;
+  width: 90%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.12);
+  margin: 0 auto;
+}
+.logout {
+  display: flex;
+  align-items: center;
+  line-height: 100%;
+  padding: 2px 12px;
+  height: 52px;
+}
+.logout img {
+  margin-left: 8px;
+}
+.logout a {
+  font-size: 15px;
+  line-height: 100%;
+  color: rgba(212, 0, 0, 1);
+  
+}

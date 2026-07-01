@@ -1,7 +1,7 @@
 "use client"
 
 import { useQuery } from "@tanstack/react-query";
-import { fetcher } from "../../services/services";
+import { fetcher } from "../../services/tour";
 
 
 export default function Home() {
@@ -9,8 +9,7 @@ export default function Home() {
 
   const { data, isLoading, error, isFetching } = useQuery({
     queryKey: ["tour"],
-    queryFn: fetcher,
-    staleTime: 60 * 1000,
+    queryFn: fetcher
   });
 
   console.log(data);

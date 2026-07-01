@@ -8,6 +8,7 @@ const setAccessToken = (tokens) => {
     document.cookie = `accessToken=${tokens.accessToken}; max-age=${1 * 24 * 60 * 60}`
 };
 
+
 const getCookie = (cookieName) => {
     return document.cookie
         .split(";")
@@ -17,4 +18,4 @@ const getCookie = (cookieName) => {
 
 
 export default setCookie;
-export { getCookie,setAccessToken }
+export { getCookie, setAccessToken }
