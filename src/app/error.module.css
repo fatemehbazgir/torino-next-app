@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 252px);
+  margin: auto;
+}
+.container div {
+  margin-top: 10px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  width: 400px;
+  margin-top: 50px;
+
+}
+.content p:first-child {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 100%;
+  color: rgba(40, 40, 40, 1);
+  margin-bottom: 30px;
+}
+.content p:last-child {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 100%;
+  color: rgba(40, 40, 40, 1);
+}
