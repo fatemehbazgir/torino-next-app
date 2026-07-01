@@ -7,9 +7,9 @@ import React, { useEffect, useState } from 'react'
 import styles from "./Header.module.css"
 import SendOtpModal from '../template/SendOtpModal'
 import CheckOtpModal from '../template/CheckOtpModal'
-import api from '../../../../configs/api';
 import DropDown from '../module/DropDown';
-import { e2p } from '@/app/utils/numbers';
+import api from '../../configs/api';
+import { e2p } from '../../utils/numbers';
 
 
 

@@ -1,14 +1,14 @@
 "use client"
-import { formatTime } from '@/app/utils/timeConversion'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import OtpInput from 'react18-input-otp'
-import api from '../../../../configs/api'
-import { checkOtp } from '../../../../services/auth'
-import setCookie from '@/app/utils/cookie'
 import styles from "./CheckOtpModal.module.css"
-import { e2p } from '@/app/utils/numbers'
 import { useRouter } from 'next/navigation';
+import api from '../../configs/api'
+import { checkOtp } from '../../services/auth'
+import setCookie from '../../utils/cookie'
+import { e2p } from '../../utils/numbers'
+import { formatTime } from '../../utils/timeConversion'
 
 
 function CheckOtpModal({ code, setCode, mobile, setStep }) {

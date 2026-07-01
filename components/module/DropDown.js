@@ -1,8 +1,8 @@
 import Image from "next/image"
 import styles from "./DropDown.module.css"
 import Link from "next/link"
-import { e2p } from "@/app/utils/numbers"
 import { useEffect, useRef } from "react";
+import { e2p } from "../../utils/numbers";
 
 function DropDown({ profile, onClose }) {
     const dropDownRef = useRef(null);

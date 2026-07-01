@@ -1,6 +1,6 @@
-import { getCookie, setAccessToken } from "@/app/utils/cookie";
 import axios from "axios";
 import { getNewTokens } from "../services/token";
+import { getCookie, setAccessToken } from "../utils/cookie";
 
 
 

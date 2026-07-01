@@ -1,11 +1,11 @@
 import { useForm, SubmitHandler } from "react-hook-form"
 import Image from "next/image"
 import { yupResolver } from "@hookform/resolvers/yup";
-import { loginUserSchema } from "../../../../schema/LoginForm";
-import api from "../../../../configs/api";
 
 import styles from "./SendOtpModal.module.css"
-import { e2p } from "@/app/utils/numbers";
+import api from "../../configs/api";
+import { loginUserSchema } from "../../schema/LoginForm";
+import { e2p } from "../../utils/numbers";
 
 function SendOtpModal({ setStep, setMobile, setCode }) {
     const {
