@@ -5,7 +5,7 @@
 }
 
 :root {
-  --yekan : var(--font-yekan), sans-serif;
+  --yekan: var(--font-yekan), sans-serif;
   --vazir: var(--font-vazir), sans-serif;
 }
 
@@ -13,6 +13,29 @@ html,
 body {
   max-width: 1366px;
   font-family: var(--font-yekan);
+}
+body .my-input-style.css-137m4ck {
+  width: 290px !important;
+  height: 250px !important;
+  border-radius: 12px;
+  position: absolute;
+}
+body .my-input-style.css-137m4ck .zm-Header {
+  background: none;
+  border-bottom: none;
+}
+body .my-input-style.css-137m4ck > div:not(.zm-Header) {
+  margin: 0 !important;
+}
+body .zm-DaysButton.css-1x5jyy6  {
+  width: 34px;
+  height: 30px;
+}
+body .css-qmbtae  {
+width: 30px;
+display: block;
+margin-right: 5px;
+margin-bottom: 12px;
 }
 
 a {

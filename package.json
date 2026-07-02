@@ -18,7 +18,8 @@
     "react-hook-form": "^7.80.0",
     "react-timer-hook": "^4.0.6",
     "react18-input-otp": "^1.1.4",
-    "yup": "^1.7.1"
+    "yup": "^1.7.1",
+    "zaman": "^2.1.1"
   },
   "devDependencies": {
     "babel-plugin-react-compiler": "1.0.0",

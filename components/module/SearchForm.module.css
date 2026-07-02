@@ -1,0 +1,76 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container p {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 100%;
+  margin-top: 16px;
+  color: rgba(89, 89, 89, 1);
+}
+.container .title {
+  color: rgba(40, 167, 69, 1);
+}
+.container form {
+  width: 906px;
+  height: 71px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 15px 18px 15px 10px;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 1);
+  margin-top: 36px;
+}
+
+.container form {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.container form div {
+  display: flex;
+  align-items: center;
+  line-height: 100%;
+}
+
+.container form input {
+  border: none;
+  width: 200px;
+  padding: 8px;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  margin-left: 12px;
+}
+
+.container form input:focus {
+  outline: none;
+}
+.container .content {
+  display: flex;
+  flex-direction: column;
+}
+.container .content div span {
+  font-size: 14px;
+  color: red;
+}
+.date span {
+  font-size: 14px;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 0.6);
+  margin-right: 6px;
+}
+.search {
+  width: 166px;
+  height: 51px;
+  border-radius: 16px;
+  padding: 8px;
+  background: rgba(40, 167, 69, 1);
+  font-size: 24px;
+  line-height: 100%;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  left: 11;
+  border: none;
+  cursor: pointer;
+}
