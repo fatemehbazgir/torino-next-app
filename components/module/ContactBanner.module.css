@@ -1,0 +1,38 @@
+.container {
+  width: 1188px;
+  height: 251px;
+  margin: 0 auto 120px;
+  position: relative;
+}
+.callInformation {
+  position: absolute;
+  top: 70px;
+  left: 72px;
+}
+.callInformation div {
+  display: flex;
+  justify-content: space-between;
+  width: 104px;
+  height: 60px;
+  padding: 8px;
+}
+.callInformation div p {
+  font-family: var(--font-vazir);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 1);
+  margin-right: 14px;
+}
+.callInformation a {
+  display: inline-block;
+  width: 175px;
+  height: 41px;
+  border-radius: 9px;
+  padding: 8px;
+  background: rgba(16, 65, 27, 1);
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+}

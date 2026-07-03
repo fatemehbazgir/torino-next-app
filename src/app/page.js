@@ -3,6 +3,7 @@ import { fetcher } from '../../services/tour';
 import Image from "next/image";
 import SearchForm from "../../components/module/SearchForm";
 import TourList from "../../components/template/TourList";
+import ContactBanner from '../../components/module/ContactBanner';
 
 
 export default async function Home() {
@@ -25,6 +26,7 @@ export default async function Home() {
       <HydrationBoundary state={dehydrate(queryClient)}>
         <TourList />
       </HydrationBoundary>
+      <ContactBanner />
 
     </div>
 

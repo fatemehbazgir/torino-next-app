@@ -12,8 +12,6 @@ function TourCard({ data }) {
     const startOptions = { month: 'long' };
 
 
-    console.log(data);
-    console.log(data.id);
     return (
 
         <div className={styles.container}>
