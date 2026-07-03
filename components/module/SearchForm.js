@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import { useForm, SubmitHandler } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup";

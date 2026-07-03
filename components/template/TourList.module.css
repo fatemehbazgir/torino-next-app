@@ -1,0 +1,18 @@
+.tours {
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+.tours .title {
+  margin: 16px 98px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 1);
+}
+.container {
+  width: calc(100% - 180px);
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
