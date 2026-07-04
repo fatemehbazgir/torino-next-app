@@ -18,6 +18,7 @@
     "react-hook-form": "^7.80.0",
     "react-timer-hook": "^4.0.6",
     "react18-input-otp": "^1.1.4",
+    "swiper": "^14.0.1",
     "yup": "^1.7.1",
     "zaman": "^2.1.1"
   },

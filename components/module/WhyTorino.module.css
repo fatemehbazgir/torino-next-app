@@ -1,0 +1,79 @@
+.container {
+  width: 1188px;
+  margin: auto;
+  display: flex;
+}
+.whyTorino {
+  display: flex;
+  align-items: center;
+}
+.leftContent {
+  width: 58%;
+}
+.whyTorino .question {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #28a745 0%, #10411b 100%);
+  font-family: var(--font-vazir);
+  font-weight: 500;
+  font-size: 38px;
+  text-align: center;
+  vertical-align: middle;
+  color: rgba(255, 255, 255, 1);
+}
+.whyTorino .title {
+  margin-right: 12px;
+  font-family: var(--font-vazir);
+  font-weight: 500;
+  font-size: 40px;
+  color: rgba(40, 40, 40, 1);
+}
+.whyTorino .title span {
+  color: rgba(40, 167, 69, 1);
+}
+.container .description {
+  width: 460px;
+}
+.container .description p:first-child {
+  font-family: var(--font-vazir);
+  font-weight: 500;
+  font-size: 24px;
+  margin-top: 28px;
+}
+.container .description p:last-child {
+  font-size: 20px;
+  text-align: justify;
+  line-height: 220.00000000000003%;
+  margin-top: 14px;
+  font-family: var(--font-vazir);
+  font-weight: 200;
+}
+.guide {
+  width: 1188px;
+  padding: 20px 0 20px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.subGuid {
+  display: flex;
+  align-items: center;
+}
+.subGuid div {
+  width: 248px;
+  margin-right: 8px;
+}
+.subGuid div p:first-child {
+  font-family: var(--font-vazir);
+  font-weight: 500;
+  font-size: 26px;
+  color: rgba(40, 40, 40, 1);
+}
+.subGuid div p:last-child{
+  font-family: var(--font-vazir);
+  font-weight: 200;
+  font-size: 16px;
+  color: rgba(40, 40, 40, 1);
+
+}

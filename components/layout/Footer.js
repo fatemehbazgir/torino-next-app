@@ -4,6 +4,7 @@ import styles from "./Footer.module.css"
 function Footer() {
     return (
         <>
+        <hr style={{ border: 'none',width:"1188px",margin:"auto", height: '1px', backgroundColor: 'rgba(0, 0, 0, 0.2)' }}/>
             <div className={styles.footer}>
                 <div className={styles.rightFooter}>
                     <div>
