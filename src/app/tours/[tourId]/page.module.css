@@ -1,0 +1,112 @@
+.background {
+  background: rgba(243, 243, 243, 1);
+  padding-top: 30px;
+  padding-bottom: 80px;
+}
+.container {
+  width: 1188px;
+  height: 427px;
+  margin: auto;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 18px 14px;
+  display: flex;
+  flex-direction: column;
+}
+.container .detailsTour {
+  display: flex;
+}
+.imageTour {
+  border-radius: 12px;
+  margin-left: 18px;
+}
+.leftDetailsTour {
+  display: flex;
+  flex-direction: column;
+}
+.firstDetails {
+  margin-top: 4px;
+}
+.firstDetails p:first-child {
+  font-weight: 700;
+  font-size: 32px;
+  color: rgba(0, 0, 0, 1);
+}
+.firstDetails p:last-child {
+  font-weight: 100;
+  font-size: 20px;
+  color: rgba(40, 40, 40, 1);
+}
+.secondDetails {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.secondDetails div {
+  display: flex;
+  align-items: center;
+  line-height: 100%;
+  width: 169px;
+  height: 47px;
+  padding: 8px;
+}
+.secondDetails div img {
+  margin-left: 6px;
+}
+.secondDetails div p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  color: rgba(125, 125, 125, 1);
+}
+.reservation {
+  width: 745px;
+  margin-left: 14px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.reservation span {
+  font-size: 28px;
+  font-family: var(--font-vazir);
+  font-weight: 500;
+  color: rgba(0, 158, 202, 1);
+}
+.reservation p {
+  font-family: var(--font-vazir);
+  font-weight: 200;
+  font-size: 14px;
+  color: rgba(40, 40, 40, 0.8);
+}
+
+.containerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.detailsBottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.descriptionDetailsBottom {
+  display: flex;
+  margin-bottom: 8px;
+}
+.descriptionDetailsBottom img {
+  margin-left: 6px;
+}
+.descriptionDetailsBottom p {
+  font-family: var(--font-vazir);
+  font-weight: 400;
+  font-size: 18px;
+  color: rgba(68, 68, 68, 1);
+}
+.subContainerContent {
+  font-family: var(--font-vazir);
+  font-weight: 500;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 1);
+}

@@ -1,4 +1,4 @@
-import { object, string } from 'yup';
+import {  object, string } from 'yup';
 
 
 export const searchFormSchema = object({
@@ -15,6 +15,6 @@ export const searchFormSchema = object({
         .max(20, "تعداد کاراکتر بیشتر از حد مجاز است")
         .min(2, "حداقل 2 کاراکتر وارد کنید")
         .matches(/^[\u0600-\u06FF\s]+$/, 'ورودی نباید شامل عدد باشد')
-
+    
 });
 

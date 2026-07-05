@@ -1,0 +1,14 @@
+.reservation{
+  width: 204px;
+  height: 56px;
+  border-radius: 10px;
+  padding: 8px;
+  background: rgba(40, 167, 69, 1);
+  font-family: var(--font-vazir);
+  font-size: 24px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}

@@ -1,9 +1,11 @@
 .footer {
   display: flex;
   justify-content: space-between;
-  width: calc(100% - 252px);
+  width: 100%;
+  padding: 0 126px;
   margin: auto;
-
+  background: rgba(255, 255, 255, 1);
+  
 }
 .rightFooter {
   display: grid;
@@ -44,11 +46,9 @@
   margin-right: 30px;
 }
 .copyright {
-  
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   font-weight: 400;
-  font-size:15px;
+  font-size: 15px;
   text-align: center;
   padding: 8px 0;
 }
-

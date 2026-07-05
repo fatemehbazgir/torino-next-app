@@ -6,6 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { searchFormSchema } from "../../schema/SearchForm";
 import { DatePicker } from "zaman";
 import styles from "./SearchForm.module.css"
+import { useState } from "react";
 
 
 
@@ -18,7 +19,11 @@ function SearchForm() {
     } = useForm({
         resolver: yupResolver(searchFormSchema),
     });
-    const onSubmit = () => { }
+    const[date,setDate]=useState("");
+
+    const onSubmit = (data) => {
+        console.log({date,data});
+    }
     return (
         <div className={styles.container}>
             <p><span className={styles.title}>تورینو</span> برگزار کننده بهترین تور های داخلی و خارجی</p>
@@ -42,9 +47,11 @@ function SearchForm() {
                 <div className={styles.date}>
                     <Image src="/images/calendar.png" width={20} height={20} alt="calendar" />
                     <span>تاریخ</span>
-                    <DatePicker className="my-input-style" range onChange={(e) => console.log(e.value)} accentColor="#28a745" />
+                    <DatePicker  className="my-input-style" selected={date} range onChange={(date) => setDate(date)} accentColor="#28a745" />
 
-
+                    {/* <div>
+                        {errors.date && <span>لطفا تاریخ معتبر را وارد کنید</span>}
+                    </div> */}
                 </div>
 
                 <button className={styles.search} type="submit">جستجو</button>
