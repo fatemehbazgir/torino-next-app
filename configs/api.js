@@ -1,27 +1,75 @@
-import axios from "axios";
-import { getNewTokens } from "../services/token";
-import { getCookie, setAccessToken } from "../utils/cookie";
+// import axios from "axios";
+// import { getNewTokens } from "../services/token";
+// import { getCookie, setAccessToken } from "../utils/cookie";
 
+
+
+// const api = axios.create({
+//     baseURL: process.env.NEXT_PUBLIC_BASE_URL,
+//     headers: {
+//         "Content-Type": "application/json"
+//     }
+// });
+
+// api.interceptors.request.use((request) => {
+//     const accessToken = getCookie("accessToken");
+
+//     if (accessToken) {
+//         request.headers["Authorization"] = `bearer ${accessToken}`
+//     }
+//     return request;
+// },
+//     (error) => {
+//         return Promise.reject(error);
+//     }
+// );
+
+// api.interceptors.response.use(
+//     (response) => {
+//         return response;
+//     },
+//     async (error) => {
+//         const originalRequest = error.config;
+
+//         if (error.response?.status === 401 && !originalRequest._retry) {
+//             originalRequest._retry = true;
+
+//             const res = await getNewTokens();
+//             if (!res?.response) return;
+
+//             setAccessToken(res.response.data)
+
+//             return api(originalRequest);
+
+
+//         }
+
+//     })
+
+// export default api;
+
+import axios from "axios";
+import { getCookie, setCookie } from "../utils/cookie";
 
 
 const api = axios.create({
     baseURL: process.env.NEXT_PUBLIC_BASE_URL,
     headers: {
-        "Content-Type": "application/json"
-    }
+        "Content-Type": "application/json",
+    },
 });
 
-api.interceptors.request.use((request) => {
-    const accessToken = getCookie("accessToken");
-
-    if (accessToken) {
-        request.headers["Authorization"] = `bearer ${accessToken}`
-    }
-    return request;
-},
+api.interceptors.request.use(
+    (request) => {
+        const accessToken = getCookie("accessToken");
+        if (accessToken) {
+            request.headers["Authorization"] = `Bearer ${accessToken}`;
+        }
+        return request;
+    },
     (error) => {
         return Promise.reject(error);
-    }
+    },
 );
 
 api.interceptors.response.use(
@@ -30,20 +78,41 @@ api.interceptors.response.use(
     },
     async (error) => {
         const originalRequest = error.config;
-
-        if (error.response?.status === 401 && !originalRequest._retry) {
+        if (
+            (error.response.status === 403 || error.response.status === 401) &&
+            !originalRequest._retry
+        ) {
             originalRequest._retry = true;
 
             const res = await getNewTokens();
-            if (!res?.response) return;
-
-            setAccessToken(res.response.data)
-
-            return api(originalRequest);
-
-
+            if (res?.response?.status === 200) {
+                setCookie("accessToken", res?.response?.data.accessToken, 30);
+                return api(originalRequest);
+            } else {
+                setCookie("accessToken", "", 0);
+                setCookie("refreshToken", "", 0);
+            }
         }
+        return Promise.reject(error.response.data);
+    },
+);
 
-    })
 
 export default api;
+
+const getNewTokens = async () => {
+    const refreshToken = getCookie("refreshToken");
+    if (!refreshToken) return;
+    try {
+        const response = await axios.post(
+            `${process.env.NEXT_PUBLIC_BASE_URL}/auth/refresh-token`,
+            {
+                refreshToken,
+            },
+        );
+        return { response };
+    } catch (error) {
+        return { error };
+    }
+};
+

@@ -1,3 +1,4 @@
+
 import api from "../configs/api"
 
 const checkOtp = async (mobile, code) => {
@@ -9,4 +10,14 @@ const checkOtp = async (mobile, code) => {
     }
 }
 
-export { checkOtp };
+const getTourId=async(tourId)=>{
+    try {
+        const response=await api.get(`/tour/${tourId}`);
+        return response.data
+    } catch (error) {
+        return {error}
+    }
+
+}
+
+export { checkOtp,getTourId };

@@ -5,8 +5,9 @@ const p2e = (s) =>
 
 const sp = (number) => {
     const seperatedNumber = number
-        .toString()
+        ?.toString()
         .match(/(\d+?)(?=(\d{3})+(?!\d)|$)/g);
+    if (!seperatedNumber) return "۰"
     const joinedNumber = seperatedNumber.join(",");
     return e2p(joinedNumber);
 };

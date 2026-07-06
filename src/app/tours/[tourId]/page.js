@@ -1,14 +1,18 @@
 export const revalidate = 3600;
 import Image from "next/image";
 import styles from "./page.module.css"
-import api from "../../../../configs/api";
 import PurchaseReservationButton from "../../../../components/module/PurchaseReservationButton";
 import { e2p, sp } from "../../../../utils/numbers";
 import { calculateStayDuration } from "../../../../utils/calculation";
+import { cookies } from 'next/headers';
+
 
 async function Page({ params }) {
+    const cookieStore = await cookies();
+    const token = cookieStore.get('accessToken')?.value;
 
-    let detailTour = null;
+let detailTour=null;
+
     const { tourId } = await params;
     const translateCity = (cityName) => {
         return cityTranslationMap[cityName] || cityName;
@@ -22,11 +26,16 @@ async function Page({ params }) {
 
 
 
-
     try {
-        const res = await fetch(`http://localhost:6500/tour/${tourId}`)
+        const res = await fetch(`http://localhost:6500/tour/${tourId}`, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        })
+
         detailTour = await res.json();
-        console.log(detailTour);
+        console.log(detailTour, response);
+
 
     } catch (error) {
         console.log(error);
@@ -67,7 +76,7 @@ async function Page({ params }) {
                         </div>
                         <div className={styles.reservation}>
                             <p><span>{sp(detailTour.price)}</span>  تومان</p>
-                            <PurchaseReservationButton tourId={detailTour.id} />
+                            <PurchaseReservationButton tourId={detailTour.id} token={token} />
 
                         </div>
                     </div>

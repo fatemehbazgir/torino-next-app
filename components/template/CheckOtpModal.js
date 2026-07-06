@@ -6,7 +6,7 @@ import styles from "./CheckOtpModal.module.css"
 import { useRouter } from 'next/navigation';
 import api from '../../configs/api'
 import { checkOtp } from '../../services/auth'
-import setCookie from '../../utils/cookie'
+import { setCookie } from '../../utils/cookie'
 import { e2p } from '../../utils/numbers'
 import { formatTime } from '../../utils/timeConversion'
 
@@ -48,9 +48,10 @@ function CheckOtpModal({ code, setCode, mobile, setStep }) {
     const { response, error } = await checkOtp(mobile, code)
 
     if (response) {
-      setCookie(response.data);
+      setCookie("accessToken", response?.data?.accessToken, 30);
+      setCookie("refreshToken", response?.data?.refreshToken, 360);
       setStep(0);
-      router.refresh();
+      // router.refresh();
       window.location.href = '/'
 
     }
