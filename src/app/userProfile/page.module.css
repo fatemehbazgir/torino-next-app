@@ -1,0 +1,134 @@
+.container {
+  width: 1188px;
+  display: flex;
+  margin: auto;
+  margin-top: 30px;
+}
+.detailProfile {
+  width: 872px;
+}
+.firstSection {
+  height: 115px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.detailProfile .title {
+  padding: 14px 12px;
+  font-size: 16px;
+}
+.detailsFirstSection {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px 26px;
+}
+.detailsFirstSection div {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.detailsFirstSection div p:first-child {
+  width: 112px;
+  margin-left: 12px;
+  color: rgb(90, 89, 89);
+  font-weight: 100;
+}
+.link {
+  margin-left: 30px;
+}
+.link a {
+  display: flex;
+  color: rgba(0, 158, 202, 1);
+}
+.link img {
+  margin-left: 12px;
+}
+.secondSection {
+  display: flex;
+  flex-direction: column;
+  height: 171px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-top: 28px;
+}
+.firstSecondSection {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 12px;
+  font-size: 16px;
+}
+.firstSecondSection a {
+  display: flex;
+  align-items: center;
+  color: rgba(0, 158, 202, 1);
+  font-size: 14px;
+}
+.firstSecondSection img {
+  margin-left: 12px;
+}
+.sectionSecondSection {
+  width: 600px;
+  padding: 0 12px;
+}
+.firstSectionSecondSection,
+.secondSectionSecondSection {
+  display: flex;
+  justify-content: space-between;
+}
+.firstSectionSecondSection div,
+.secondSectionSecondSection div {
+  display: flex;
+  align-items: center;
+}
+.firstSectionSecondSection div {
+  margin-bottom: 30px;
+}
+.firstSectionSecondSection div p:first-child,
+.secondSectionSecondSection div p:first-child,
+.secondThirdSection div p:first-child {
+  font-size: 14px;
+  width: 112px;
+  color: rgb(90, 89, 89);
+  font-weight: 100;
+  margin-left: 12px;
+}
+.thirdSection {
+  display: flex;
+  flex-direction: column;
+  height: 171px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-top: 28px;
+  margin-bottom: 50px;
+}
+.firstThirdSection {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 12px;
+  font-size: 16px;
+}
+.firstThirdSection a{
+    display: flex;
+  color: rgba(0, 158, 202, 1);
+  font-size: 14px;
+  align-items: center;
+}
+.firstThirdSection img{
+    margin-left: 12px;
+}
+.secondThirdSection{
+    display: flex;
+    flex-direction: column;
+  padding: 8px 12px 26px;
+}
+.secondThirdSection div{
+    display: flex;
+}
+
+.firstSecondThirdSection{
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    margin-bottom: 25px;
+}

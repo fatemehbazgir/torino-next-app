@@ -19,8 +19,8 @@ export default async function Home() {
 
 
   return (
-    
-  
+
+
     <div>
       <div>
         <Image src="/images/banner.png" width={1351} height={350} alt='banner' />
@@ -33,7 +33,7 @@ export default async function Home() {
       <WhyTorino />
 
     </div>
-    
+
 
   );
 }
