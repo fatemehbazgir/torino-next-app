@@ -16,7 +16,7 @@
 .container .items img {
   margin-left: 8px;
 }
-.container .items p {
+.container .items a {
   font-weight: 100;
   font-size: 15px;
 }

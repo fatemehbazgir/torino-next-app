@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1188px;
+    height: 300px;
+    margin: auto;
+
+    font-size: 45px;
+    font-family: var(--font-vazir);
+    font-width: 500;
+ 
+
+}

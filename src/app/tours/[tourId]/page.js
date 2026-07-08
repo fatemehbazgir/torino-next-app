@@ -34,7 +34,6 @@ let detailTour=null;
         })
 
         detailTour = await res.json();
-        console.log(detailTour, response);
 
 
     } catch (error) {
