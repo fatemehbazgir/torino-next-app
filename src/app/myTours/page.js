@@ -1,7 +1,7 @@
-
 import { cookies } from 'next/headers';
 import Sidebar from '../../../components/module/Sidebar'
 import MyTourCard from '../../../components/module/MyTourCard';
+import styles from "./page.module.css"
 
 async function Page() {
     const cookieStore = await cookies();
@@ -17,6 +17,7 @@ async function Page() {
             }
         )
         const data = await res.json();
+
         myTour = data;
     } catch (error) {
         console.log(error);
@@ -24,10 +25,12 @@ async function Page() {
 
 
     return (
-        <div>
+        <div className={styles.parent}>
             <Sidebar />
-            <div>
-                <MyTourCard  data={myTour}/>
+            <div className={styles.container}>
+                {
+                    myTour.map((tourItem)=><MyTourCard key={tourItem.id} tourItem={tourItem}/>)
+                }
             </div>
         </div>
     )

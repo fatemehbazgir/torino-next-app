@@ -1,0 +1,98 @@
+.container {
+  width: 832px;
+  margin: auto;
+  margin-bottom: 12px;
+  height: 168px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.firstLine {
+  display: flex;
+  justify-content: space-between;
+  margin: 14px;
+}
+.firstLine div {
+  display: flex;
+}
+.firstLine div img {
+  margin-left: 8px;
+}
+.firstLine div p {
+  font-family: var(--font-vazir);
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 1);
+}
+.firstLine .status {
+  width: 89px;
+  height: 20px;
+  border-radius: 27px;
+  padding: 8px;
+  background: rgba(40, 167, 69, 0.3);
+  font-weight: 400;
+  font-size: 12px;
+  color: rgba(40, 167, 69, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 100%;
+}
+.secondLine {
+  display: flex;
+  justify-content: space-between;
+  margin: 14px;
+}
+
+.secondLine div {
+  display: flex;
+  margin: 20px 0 0 40px;
+}
+.secondLine div P:first-child {
+  font-weight: 600;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 1);
+}
+.dot {
+  display: inline-block;
+  margin-right: 15px;
+  margin-left: 15px;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.secondLine div p:last-child {
+  font-family: var(--font-vazir);
+  font-weight: 400;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.group {
+  width: 398px;
+}
+.border {
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+.thirdLine{
+    display: flex;
+
+    margin: 14px;
+}
+.thirdLine span:first-child{
+    font-weight: 400;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-left: 10px;
+    font-family: var(--font-vazir);
+
+}
+.groupOne{
+    width: 365px;
+}
+.payment{
+    display: flex;
+}
+.unit{
+    font-weight: 300 !important;
+    font-size: 10px !important;
+    margin-right: 2px !important;
+}
