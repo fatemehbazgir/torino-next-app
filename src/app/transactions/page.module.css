@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  width: 1111px;
+  margin: auto;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+.tableContainer {
+  width: 872px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.tableContainer table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.tableContainer table thead th {
+  background: rgba(243, 243, 243, 1);
+  height: 55px;
+  padding: 12px 15px;
+  border: none;
+  box-sizing: border-box;
+}
+.tableContainer table thead th:first-child {
+  border-top-right-radius: 10px;
+}
+.tableContainer table thead th:last-child {
+  border-top-left-radius: 10px;
+}
+.tableContainer table tbody td {
+  padding: 12px 15px;
+  text-align: center;
+}
+
