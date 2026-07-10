@@ -13,7 +13,7 @@ async function Layout({ children }) {
 
     return (
         <>
-            <Header token={token} />
+            <Header token={token}/>
             {children}
             <Footer />
         </>

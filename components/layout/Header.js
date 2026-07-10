@@ -13,7 +13,7 @@ import { e2p } from '../../utils/numbers';
 
 
 
-function Header({ token }) {
+function Header({token}) {
 
 
     const [step, setStep] = useState(0);
@@ -68,7 +68,7 @@ function Header({ token }) {
                 }
 
             </div>
-            {isOpen && <DropDown profile={profile} onClose={closeDropDown} />}
+            {isOpen && <DropDown profile={profile} onClose={closeDropDown}  />}
             {step === 1 && <SendOtpModal setStep={setStep} setMobile={setMobile} setCode={setCode} />}
             {step === 2 && <CheckOtpModal setStep={setStep} code={code} setCode={setCode} mobile={mobile} />}
         </>

@@ -3,6 +3,7 @@ import styles from "./DropDown.module.css"
 import Link from "next/link"
 import { useEffect, useRef } from "react";
 import { e2p } from "../../utils/numbers";
+import { setCookie } from "../../utils/cookie";
 
 function DropDown({ profile, onClose }) {
     const dropDownRef = useRef(null);
@@ -18,6 +19,13 @@ function DropDown({ profile, onClose }) {
         document.addEventListener("mousedown", handleClickOutside);
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, [onClose]);
+
+    const logoutHandler = () => {
+        setCookie("accessToken", "")
+        setCookie("refreshToken", "")
+        window.reload();
+
+    }
     return (
 
         <div className={styles.container} ref={dropDownRef}>
@@ -35,7 +43,7 @@ function DropDown({ profile, onClose }) {
             <span className={styles.line}></span>
             <div className={styles.logout}>
                 <Image src="/images/logout.png" width={20} height={20} alt='logout' />
-                <Link href="/">خروج از حساب کاربری</Link>
+                <Link href="/" onClick={logoutHandler}>خروج از حساب کاربری</Link>
             </div>
         </div>
 

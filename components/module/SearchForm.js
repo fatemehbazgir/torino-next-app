@@ -7,6 +7,7 @@ import { searchFormSchema } from "../../schema/SearchForm";
 import { DatePicker } from "zaman";
 import styles from "./SearchForm.module.css"
 import { useState } from "react";
+import { flattenObject } from "../../utils/helper";
 
 
 
@@ -22,7 +23,7 @@ function SearchForm() {
     const[date,setDate]=useState("");
 
     const onSubmit = (data) => {
-        console.log({date,data});
+        console.log(flattenObject({date,data}));
     }
     return (
         <div className={styles.container}>
