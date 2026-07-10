@@ -16,13 +16,16 @@ async function Page() {
                 cache: 'no-store'
             }
         )
+    
         const data = await res.json();
 
         myTour = data;
     } catch (error) {
         console.log(error);
+        
     }
 
+    if(!myTour)return<p>در حال بارگیری اطلاعات</p>
 
     return (
         <div className={styles.parent}>

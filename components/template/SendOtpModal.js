@@ -25,9 +25,8 @@ function SendOtpModal({ setStep, setMobile, setCode }) {
             setCode(res.data.code)
             setMobile(mobile);
             if (res) return setStep(2);
-            console.log(res);
         } catch (error) {
-            if (error) console.log(errors.response.data.message);
+            console.log(error);
         }
     };
     return (

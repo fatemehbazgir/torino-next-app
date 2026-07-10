@@ -113,3 +113,12 @@
   font-size: 24px;
   color: rgba(255, 255, 255, 1);
 }
+
+.error {
+  border-color: #e74c3c !important;
+  background-color: #fff5f5;
+}
+
+.error:focus {
+  border-color: #c0392b !important;
+}

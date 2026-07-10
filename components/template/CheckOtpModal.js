@@ -9,10 +9,10 @@ import { checkOtp } from '../../services/auth'
 import { setCookie } from '../../utils/cookie'
 import { e2p } from '../../utils/numbers'
 import { formatTime } from '../../utils/timeConversion'
+import toast from 'react-hot-toast'
 
 
 function CheckOtpModal({ code, setCode, mobile, setStep }) {
-  const router = useRouter();
 
   const time = new Date();
   time.setSeconds(time.getSeconds() + 120);
@@ -50,8 +50,8 @@ function CheckOtpModal({ code, setCode, mobile, setStep }) {
     if (response) {
       setCookie("accessToken", response?.data?.accessToken, 30);
       setCookie("refreshToken", response?.data?.refreshToken, 360);
+      toast.success("ورود با موفقیت انجام شد")
       setStep(0);
-      // router.refresh();
       window.location.href = '/'
 
     }
@@ -95,6 +95,7 @@ function CheckOtpModal({ code, setCode, mobile, setStep }) {
           )}
         </div>
       </div>
+
     </div>
   )
 }

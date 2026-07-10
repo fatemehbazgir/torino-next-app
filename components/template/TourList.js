@@ -3,17 +3,23 @@ import { useQuery } from '@tanstack/react-query';
 import { fetcher } from '../../services/tour';
 import TourCard from '../module/TourCard';
 import styles from "./TourList.module.css"
+import { ThreeDots } from 'react-loader-spinner';
 
 
 function TourList() {
+
 
     const { data, isLoading, isError } = useQuery({
         queryKey: ['tours'],
         queryFn: fetcher,
     });
 
-    console.log(data);
-    if (isLoading) return <div>در حال بارگذاری... ⏳</div>;
+
+    if (isLoading) return <ThreeDots wrapperStyle={{
+        display: 'flex',
+        justifyContent: 'center',
+        margin:"50px"
+    }} />
 
     return (
         <div className={styles.tours}>

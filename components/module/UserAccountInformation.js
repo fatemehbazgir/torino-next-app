@@ -25,17 +25,16 @@ function UserAccountInformation() {
                 email
             });
             router.push("/userProfile")
-            console.log(res);
+           
         } catch (error) {
-            if (error) console.log(errors.response.data.message);
+            console.log(error);
         }
     }
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
             <div className={styles.container}>
-                <input placeholder="آدرس ایمیل" {...register("email")} />
-                {errors.email && <span>لطفا ایمیل معتبر وارد کنید!</span>}
+                <input className={`${errors.email?styles.error:""}`} placeholder="آدرس ایمیل" {...register("email")} />
             </div>
             <button type="submit">تایید</button>
         </form>

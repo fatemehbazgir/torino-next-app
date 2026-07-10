@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import api from "../../configs/api";
 import { useRouter } from "next/navigation";
 import styles from "./InputsUserInformation.module.css"
+import toast, { Toaster } from "react-hot-toast";
 
 function InputsUserInformation() {
     const router = useRouter()
@@ -26,7 +27,7 @@ function InputsUserInformation() {
             const selectedDate = new Date(date);
             const today = new Date();
             if (selectedDate > today) {
-                alert("تاریخ تولداینده نباشه");
+               toast.error("تاریخ تولد نمی تواند آینده باشد")
                 setDate(null);
             }
         }
@@ -62,9 +63,9 @@ function InputsUserInformation() {
         try {
             const res = await api.put("/user/profile", data);
             router.push("/userProfile")
-            console.log(res);
+            
         } catch (error) {
-            router.push("/userProfile")
+            console.log(error);
         }
     }
     const backHandler = () => {
@@ -74,12 +75,10 @@ function InputsUserInformation() {
         <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
 
             <div>
-                <input placeholder="نام و نام خانوادگی" {...register("fullName")} />
-                {errors.fullName && <span>لطفا نام و نام خانوادگی را کامل وارد کنید</span>}
+                <input className={`${errors.fullName?styles.error:""}`} placeholder="نام و نام خانوادگی" {...register("fullName")} />
             </div>
             <div>
-                <input placeholder="کد ملی" {...register("nationalCode")} />
-                {errors.nationalCode && <span>لطفا کد ملی صحیح را وارد کنید</span>}
+                <input className={`${errors.nationalCode?styles.error:""}`} placeholder="کد ملی" {...register("nationalCode")} />
             </div>
             <div>
                 <Controller
@@ -107,7 +106,7 @@ function InputsUserInformation() {
                 <select
                     id="gender"
                     {...register('gender')}
-                    className={styles.select}
+                    className={`${styles.select} ${errors.gender?styles.error:""}`}
                 >
                     <option value="">جنسیت</option>
                     <option value="male">آقا</option>
@@ -115,13 +114,13 @@ function InputsUserInformation() {
 
                 </select>
 
-                {errors.gender && <span>لطفا جنسیت را مشخص کنید</span>}
             </div>
 
 
 
             <button type="submit" className={styles.submit}>تایید</button>
             <button type="button" onClick={backHandler} className={styles.cancel}>انصراف</button>
+            
         </form>
 
     )

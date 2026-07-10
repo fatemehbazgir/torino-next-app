@@ -1,6 +1,7 @@
 "use client"
 import { useRouter } from 'next/navigation';
 import styles from "./PurchaseReservationButton.module.css"
+import toast from 'react-hot-toast';
 
 function PurchaseReservationButton({ tourId,token }) {
 
@@ -21,7 +22,7 @@ function PurchaseReservationButton({ tourId,token }) {
             })
 
             basket = await res.json();
-            console.log(basket, res);
+           
 
 
         } catch (error) {
@@ -29,6 +30,7 @@ function PurchaseReservationButton({ tourId,token }) {
         }
 
         router.push(`/basket/${basket.basketId}`)
+        toast.success("تور به سبد خرید شما اضافه شد")
 
     }
     return (

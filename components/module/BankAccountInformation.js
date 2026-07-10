@@ -7,10 +7,11 @@ import { useForm } from 'react-hook-form';
 import { BankAccountSchema } from '../../schema/BankAccountForm';
 import api from '../../configs/api';
 import styles from "./BankAccountInformation.module.css"
+import toast, { Toaster } from 'react-hot-toast';
 
 function BankAccountInformation() {
     const router = useRouter();
-    
+
     const {
         register,
         handleSubmit,
@@ -24,7 +25,7 @@ function BankAccountInformation() {
         const fetchProfile = async () => {
             try {
                 const res = await api.get("/user/profile");
-              
+
 
                 reset({
                     shaba_code: res.data?.payment.shaba_code || "",
@@ -44,11 +45,12 @@ function BankAccountInformation() {
         const payment = { ...data };
 
         try {
-            const res = await api.put("/user/profile", {payment});
+            const res = await api.put("/user/profile", { payment });
+            toast.success(res.data.message)
             router.push("/userProfile")
-        
+
         } catch (error) {
-            router.push("/userProfile")
+            console.log(error);
         }
     }
     const backHandler = () => {
@@ -59,25 +61,22 @@ function BankAccountInformation() {
         <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
 
             <div>
-                <input placeholder="شماره شبا" {...register("shaba_code")} />
-                {errors.shaba_code && <span>شماره شبا وارد شده معتبر نمی باشد!</span>}
+                <input className={`${errors.shaba_code ? styles.error : ""}`} placeholder="شماره شبا" {...register("shaba_code")} />
             </div>
             <div>
-                <input placeholder="شماره کارت" {...register("debitCard_code")} />
-                {errors.debitCard_code && <span>لطفا شماره کارت معتبر وارد کنید!</span>}
+                <input className={`${errors.debitCard_code ? styles.error : ""}`} placeholder="شماره کارت" {...register("debitCard_code")} />
             </div>
 
             <div>
-                <input placeholder="شماره حساب" {...register("accountIdentifier")} />
-                {errors.accountIdentifier && <span>لطفا شماره حساب معتبر وارد کنید!</span>}
+                <input className={`${errors.accountIdentifier ? styles.error : ""}`} placeholder="شماره حساب" {...register("accountIdentifier")} />
             </div>
 
 
 
             <button type="submit" className={styles.submit}>تایید</button>
             <button type="button" onClick={backHandler} className={styles.cancel}>انصراف</button>
+            <Toaster />
         </form>
-
 
     )
 }

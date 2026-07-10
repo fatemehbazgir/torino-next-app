@@ -1,3 +1,4 @@
+import { Toaster } from 'react-hot-toast';
 import Footer from './Footer'
 import Header from './Header'
 import { cookies } from 'next/headers';
@@ -14,6 +15,7 @@ async function Layout({ children }) {
     return (
         <>
             <Header token={token}/>
+            <Toaster/>
             {children}
             <Footer />
         </>

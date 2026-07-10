@@ -4,6 +4,7 @@ import { cookies } from 'next/headers';
 import { e2p, sp } from '../../../utils/numbers';
 import { format } from 'date-fns-jalali';
 import styles from "./page.module.css"
+import { ThreeDots } from 'react-loader-spinner';
 
 async function Page() {
   const cookieStore = await cookies();
@@ -11,6 +12,7 @@ async function Page() {
   let myTransaction = null;
 
 
+ 
 
   try {
     const res = await fetch("http://localhost:6500/user/transactions",
@@ -29,6 +31,11 @@ async function Page() {
     console.log(error);
   }
 
+     if (!myTransaction) return <ThreeDots wrapperStyle={{
+        display: 'flex',
+        justifyContent: 'center',
+        margin:"50px"
+    }} />
 
   return (
     <div className={styles.container}>
@@ -59,6 +66,7 @@ async function Page() {
 
 
       </div>
+    
     </div>
   )
 }
