@@ -47,9 +47,9 @@ async function Page() {
             {
               myTransaction.map((item) => (
                 <tr key={item.id}>
-                  <td>{e2p(format(new Date(item.createdAt), 'HH:mm - yyyy/MM/dd'))}</td>
-                  <td>{sp(item.amount)}</td>
-                  <td>{item.type === "Purchase" ? "ثبت نام در تور گردشگری" : "-"}</td>
+                  <td>{e2p(format(new Date(item?.createdAt), 'HH:mm - yyyy/MM/dd'))}</td>
+                  <td>{sp(item?.amount)}</td>
+                  <td>{item?.type === "Purchase" ? "ثبت نام در تور گردشگری" : "-"}</td>
                   <td>سفارش {e2p(12054902)}</td>
                 </tr>
               ))

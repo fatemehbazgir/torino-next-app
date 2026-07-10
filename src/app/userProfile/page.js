@@ -7,14 +7,24 @@ import { getProfile } from "../../../services/profile";
 import { cookies } from "next/headers";
 import Link from "next/link";
 import Image from "next/image";
+import { formatToShamsi } from "../../../utils/formatShamsi";
+
 
 async function UserProfile() {
   const cookieStore = await cookies();
   const token = cookieStore.get('accessToken')?.value;
+  const profile = await getProfile(token);
 
+  let displayBirthDate = "-";
 
-  const profile = await getProfile(token)
+  if (profile?.birthDate) {
+    const dateObject = new Date(profile.birthDate)
+    if (!isNaN(dateObject.getTime())) {
+      displayBirthDate = formatToShamsi(dateObject);
 
+    }
+
+  }
 
 
   return (
@@ -56,17 +66,17 @@ async function UserProfile() {
               </div>
               <div>
                 <p>کد ملی</p>
-                <p>{profile?.nationalCode || "-"}</p>
+                <p>{e2p(profile?.nationalCode || "-")}</p>
               </div>
             </div>
             <div className={styles.secondSectionSecondSection}>
               <div>
                 <p>جنسیت</p>
-                <p>{profile?.gender || "-"}</p>
+                <p>{profile?.gender === "female" ? "زن" : profile?.gender === "male" ? "مرد" : "-"}</p>
               </div>
               <div>
                 <p>تاریخ تولد</p>
-                <p>{profile?.birthDate || "-"}</p>
+                <p>{e2p(displayBirthDate)}</p>
               </div>
             </div>
           </div>
@@ -83,16 +93,16 @@ async function UserProfile() {
             <div className={styles.firstSecondThirdSection}>
               <div>
                 <p>شماره شبا</p>
-                <p>{profile?.IBAN || "-"}</p>
+                <p>{profile?.payment?.shaba_code || "-"}</p>
               </div>
               <div>
                 <p>شماره کارت</p>
-                <p>{profile?.cardNumber || "-"}</p>
+                <p>{profile?.payment?.debitCard_code || "-"}</p>
               </div>
             </div>
             <div>
               <p>شماره حساب</p>
-              <p>{profile.accountNumber || "-"}</p>
+              <p>{profile?.payment?.accountIdentifier || "-"}</p>
             </div>
           </div>
 

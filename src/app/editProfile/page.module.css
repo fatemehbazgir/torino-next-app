@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  width: 1188px;
+  margin: auto;
+  margin-top: 30px;
+}
+.userAccount,
+.inputsUserInformation,
+.bankAccountInformation {
+  width: 836px;
+  height: 140px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.inputsUserInformation {
+  height: 310px;
+  margin-top: 24px;
+}
+.bankAccountInformation {
+  height: 245px;
+  margin-top: 24px;
+  margin-bottom: 60px;
+}
+.title {
+  margin: 14px;
+  font-family: var(--font-vazir);
+  font-weight: 600;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 1);
+}
+.userAccountData {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 14px;
+}
+.boxMobile {
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.boxMobile p:first-child {
+  font-family: var(--font-vazir);
+  font-weight: 200;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 1);
+}
+.boxMobile p:last-child {
+  font-family: var(--font-vazir);
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(40, 40, 40, 1);
+}
