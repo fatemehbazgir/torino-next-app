@@ -2,6 +2,8 @@
   width: 1188px;
   margin: auto;
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
 }
 .whyTorino {
   display: flex;
