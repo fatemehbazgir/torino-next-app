@@ -46,7 +46,7 @@ async function Page() {
             <tr>
               <th>تاریخ و ساعت</th>
               <th>مبلغ(تومان)</th>
-              <th>نوع تراکنش</th>
+              <th className={styles.transactionType}>نوع تراکنش</th>
               <th>شماره سفارش</th>
             </tr>
           </thead>
@@ -56,7 +56,7 @@ async function Page() {
                 <tr key={item.id}>
                   <td>{e2p(format(new Date(item?.createdAt), 'HH:mm - yyyy/MM/dd'))}</td>
                   <td>{sp(item?.amount)}</td>
-                  <td>{item?.type === "Purchase" ? "ثبت نام در تور گردشگری" : "-"}</td>
+                  <td className={styles.transactionType}>{item?.type === "Purchase" ? "ثبت نام در تور گردشگری" : "-"}</td>
                   <td>سفارش {e2p(12054902)}</td>
                 </tr>
               ))

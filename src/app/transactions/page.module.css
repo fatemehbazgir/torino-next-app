@@ -32,3 +32,30 @@
   text-align: center;
 }
 
+@media (max-width: 390px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+    margin: auto;
+    padding: 30px 30px 60px;
+  }
+  .tableContainer {
+    width: 328px;
+  }
+  .transactionType {
+    display: none;
+  }
+
+  .tableContainer table thead th {
+    font-size: 12px;
+    color: rgba(40, 40, 40, 0.8);
+    padding: 10px;
+  }
+
+  .tableContainer table tbody td {
+    padding: 10px 10px;
+    text-align: center;
+    font-size: 9px;
+  }
+}
