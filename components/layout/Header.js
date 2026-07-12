@@ -13,7 +13,7 @@ import { e2p } from '../../utils/numbers';
 
 
 
-function Header({token}) {
+function Header({ token }) {
 
 
     const [step, setStep] = useState(0);
@@ -37,6 +37,7 @@ function Header({token}) {
             <div className={styles.header}>
                 <div className={styles.navbar}>
                     <Link href="/"><Image priority src="/images/Torino-logo.png" width={146} height={44} alt='Torino Logo' /></Link>
+                    <button className={styles.menu}><Image priority src="/images/menu.png" width={20} height={16} alt='menu' /></button>
 
                     <ul>
                         <li><Link href="/">صفحه اصلی</Link></li>
@@ -57,18 +58,20 @@ function Header({token}) {
 
                         </>
                     ) : (
-                        <div className={styles.headerButtons}>
+                       <> <div className={styles.headerButtons}>
                             <Image src="/images/profile.png" width={24} height={24} alt='user profile' />
-                            <button onClick={() => setStep(1)}>
+                            <button  onClick={() => setStep(1)}>
                                 ورود |
                             </button>
                             <button> ثبت نام</button>
                         </div>
+                            <button className={styles.loginButton}><Image src="/images/signInButtom.png" width={40} height={40} alt='login button' /></button>
+                       </>
                     )
                 }
 
             </div>
-            {isOpen && <DropDown profile={profile} onClose={closeDropDown}  />}
+            {isOpen && <DropDown profile={profile} onClose={closeDropDown} />}
             {step === 1 && <SendOtpModal setStep={setStep} setMobile={setMobile} setCode={setCode} />}
             {step === 2 && <CheckOtpModal setStep={setStep} code={code} setCode={setCode} mobile={mobile} />}
         </>

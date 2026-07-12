@@ -74,3 +74,31 @@
   border: none;
   cursor: pointer;
 }
+
+@media (max-width: 390px) {
+  .container {
+    align-items: center;
+    max-width: 390px;
+    text-align: center;
+  }
+  .container p {
+    font-size: 16px;
+  }
+  .container form {
+    width: 390px;
+    display: flex;
+    flex-direction: column;
+  }
+  .container form div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container form input {
+    border: none;
+    width: 200px;
+    padding: 8px;
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    margin-left: 12px;
+  }
+}

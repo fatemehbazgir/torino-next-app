@@ -5,6 +5,7 @@ import SearchForm from "../../components/module/SearchForm";
 import TourList from "../../components/template/TourList";
 import ContactBanner from '../../components/module/ContactBanner';
 import WhyTorino from '../../components/module/WhyTorino';
+import styles from "./page.module.css"
 
 
 export default async function Home() {
@@ -22,13 +23,13 @@ export default async function Home() {
 
 
     <div>
-      <div>
+      <div className={styles.banner}>
         <Image src="/images/banner.png" width={1351} height={350} alt='banner' />
       </div>
       <SearchForm />
-      <HydrationBoundary state={dehydrate(queryClient)}>
+      <HydrationBoundaryy state={dehydrate(queryClient)}>
         <TourList />
-      </HydrationBoundary>
+      </HydrationBoundaryy>
       <ContactBanner />
       <WhyTorino />
 

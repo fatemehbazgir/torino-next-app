@@ -7,6 +7,12 @@
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.16);
   padding: 15px 126px;
 }
+.menu {
+  display: none;
+}
+.loginButton {
+  display: none;
+}
 
 .navbar {
   display: flex;
@@ -69,4 +75,29 @@
 }
 .profile img:last-child {
   cursor: pointer;
+}
+
+@media (max-width: 390px) {
+  .header {
+    max-width: 420px;
+    height: 120px;
+
+  display: flex;
+  justify-content: space-between;
+}
+.navbar ul {
+display: none;
+}
+  .menu {
+    display: inline-block;
+  }
+  .loginButton {
+    display: inline-block;
+  }
+  .navbar a:first-child {
+    display: none;
+  }
+  .headerButtons {
+    display: none;
+  }
 }
