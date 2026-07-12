@@ -27,9 +27,9 @@ export default async function Home() {
         <Image src="/images/banner.png" width={1351} height={350} alt='banner' />
       </div>
       <SearchForm />
-      <HydrationBoundaryy state={dehydrate(queryClient)}>
+      <HydrationBoundary state={dehydrate(queryClient)}>
         <TourList />
-      </HydrationBoundaryy>
+      </HydrationBoundary>
       <ContactBanner />
       <WhyTorino />
 

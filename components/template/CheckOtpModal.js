@@ -74,11 +74,11 @@ function CheckOtpModal({ code, setCode, mobile, setStep }) {
             numInputs={6}
             inputStyle={
               {
-                width: "58px",
-                height: "53px",
+                width: "40px",
+                height: "35px",
                 borderRadius: "6px",
                 border: "1px solid rgba(0, 0, 0, 0.25)",
-                margin: "0 2px"
+                margin: "0 5px"
               }} />
         </div>
         <div className={styles.bottomButton}>

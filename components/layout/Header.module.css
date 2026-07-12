@@ -77,7 +77,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 390px) {
+/* @media (max-width: 390px) {
   .header {
     max-width: 420px;
     height: 120px;
@@ -100,4 +100,4 @@ display: none;
   .headerButtons {
     display: none;
   }
-}
+} */

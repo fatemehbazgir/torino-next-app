@@ -74,10 +74,42 @@
   margin-top: 35px;
   cursor: pointer;
 }
-.box form span{
-   width: 491px;
+.box form span {
+  width: 491px;
   margin: auto;
   margin-top: 5px;
   color: red;
   font-size: 14px;
+}
+
+@media (max-width: 390px) {
+  .box {
+    width: 358px;
+    height: 362px;
+  }
+  .box p {
+    font-size: 22px;
+  }
+  .box form label {
+    width: 300px;
+    margin: auto;
+    margin-bottom: 12px;
+    font-size: 16px;
+  }
+  .box form input {
+    width: 300px;
+    height: 54px;
+    margin: auto;
+  }
+  .box form button {
+    width: 300px;
+    height: 54px;
+    margin: auto;
+    margin-top: 28px;
+  }
+  .box form span {
+    width: 300px;
+    margin: auto;
+    margin-top: 5px;
+  }
 }

@@ -72,6 +72,34 @@
   margin-top: 26px;
   cursor: pointer;
 }
-.bottomButton button:hover{
+.bottomButton button:hover {
   background: rgba(40, 167, 69, 0.9);
+}
+
+@media (max-width: 390px) {
+  .box {
+    width: 358px;
+    height: 362px;
+  }
+  .title {
+    font-size: 22px;
+    text-align: center;
+    margin-top: 12px;
+  }
+  .containerOtp {
+    width: 310px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sendOtp {
+    font-size: 12px;
+  }
+  .bottomButton button {
+    width: 278px;
+    height: 54px;
+    margin: auto;
+    margin-top: 35px;
+  }
 }
