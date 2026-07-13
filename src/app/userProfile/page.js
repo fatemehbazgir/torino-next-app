@@ -34,11 +34,12 @@ async function UserProfile() {
         <div className={styles.firstSection}>
           <p className={styles.title}>اطلاعات حساب کاربری</p>
           <div className={styles.detailsFirstSection}>
-            <div>
+            <div className={styles.mobile}>
               <p>شماره موبایل</p>
               <p>{e2p(profile?.mobile)}</p>
             </div>
-            <div>
+            <div className={styles.secondItem}>
+              <div>
               <p>ایمیل</p>
               <p>{profile?.email || "-"}</p>
             </div>
@@ -47,6 +48,7 @@ async function UserProfile() {
                 <Image src="/images/edit-2.png" width={16} height={16} alt="edit button" />
                 افزودن
               </Link>
+            </div>
             </div>
           </div>
         </div>

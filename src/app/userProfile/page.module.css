@@ -20,13 +20,16 @@
 }
 .detailsFirstSection {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 8px 12px 26px;
 }
 .detailsFirstSection div {
   display: flex;
   align-items: center;
   font-size: 14px;
+}
+.secondItem {
+  margin-right: 247px;
 }
 .detailsFirstSection div p:first-child {
   width: 112px;
@@ -36,6 +39,7 @@
 }
 .link {
   margin-left: 30px;
+  margin-right: 108px;
 }
 .link a {
   display: flex;
@@ -108,27 +112,103 @@
   padding: 14px 12px;
   font-size: 16px;
 }
-.firstThirdSection a{
-    display: flex;
+.firstThirdSection a {
+  display: flex;
   color: rgba(0, 158, 202, 1);
   font-size: 14px;
   align-items: center;
 }
-.firstThirdSection img{
-    margin-left: 12px;
+.firstThirdSection img {
+  margin-left: 12px;
 }
-.secondThirdSection{
-    display: flex;
-    flex-direction: column;
+.secondThirdSection {
+  display: flex;
+  flex-direction: column;
   padding: 8px 12px 26px;
 }
-.secondThirdSection div{
-    display: flex;
+.secondThirdSection div {
+  display: flex;
 }
 
-.firstSecondThirdSection{
+.firstSecondThirdSection {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 390px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+    margin: auto;
+    padding: 30px 30px 60px;
+  }
+  .firstSection {
+    height: auto;
+  }
+  .detailProfile {
+    width: 328px;
+  }
+  .detailsFirstSection {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 12px 15px;
+  }
+  .detailsFirstSection div:first-child {
     display: flex;
     justify-content: space-between;
-    width: 600px;
-    margin-bottom: 25px;
+  }
+  .secondItem {
+    margin-right: 0px;
+  }
+  .mobile {
+    margin-bottom: 30px;
+  }
+
+  .secondSection {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .firstSecondSection {
+    display: flex;
+    padding: 14px 12px;
+    font-size: 16px;
+  }
+  
+  .sectionSecondSection {
+    width: auto;
+    padding: 0 12px;
+  }
+  .firstSectionSecondSection,
+  .secondSectionSecondSection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .firstSectionSecondSection div {
+    margin-bottom: 18px;
+  }
+  .secondSectionSecondSection div {
+    margin-bottom: 18px;
+  }
+  .thirdSection {
+    height: auto;
+  }
+  .secondThirdSection {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 12px 15px;
+}
+  .firstSecondThirdSection {
+    display: flex;
+    flex-direction: column-reverse;
+    width: auto;
+    margin-bottom:0;
+  }
+  .firstSecondThirdSection div{
+    margin-bottom: 18px;
+  }
 }
