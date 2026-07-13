@@ -13,6 +13,9 @@
 .error:focus {
   border-color: #c0392b !important;
 }
+.buttons {
+  display: flex;
+}
 .form input,
 .select {
   width: 250px;
@@ -55,4 +58,21 @@
   border: 2px solid rgba(40, 167, 69, 1);
   background: rgba(255, 255, 255, 1);
   color: rgba(40, 167, 69, 1);
+}
+
+@media (max-width: 390px) {
+  .form input,
+  .select {
+    width: 299px;
+    height: 40px;
+  }
+
+  .form button {
+    display: flex;
+    position: relative;
+    top: 18;
+    right: 1;
+    width: 142px;
+    height: 41px;
+  }
 }

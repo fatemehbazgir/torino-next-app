@@ -51,3 +51,33 @@
   font-size: 14px;
   color: rgba(40, 40, 40, 1);
 }
+@media (max-width: 390px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+    margin: auto;
+    padding: 30px 30px 60px;
+  }
+  .userAccount,
+  .inputsUserInformation,
+  .bankAccountInformation{
+    width: 328px;
+    height: auto;
+  }
+.bankAccountInformation{
+  
+}
+  .userAccountData {
+    display: flex;
+    flex-direction: column;
+    margin: 0 14px;
+  }
+  .boxMobile {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+}

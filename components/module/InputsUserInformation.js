@@ -27,7 +27,7 @@ function InputsUserInformation() {
             const selectedDate = new Date(date);
             const today = new Date();
             if (selectedDate > today) {
-               toast.error("تاریخ تولد نمی تواند آینده باشد")
+                toast.error("تاریخ تولد نمی تواند آینده باشد")
                 setDate(null);
             }
         }
@@ -63,7 +63,7 @@ function InputsUserInformation() {
         try {
             const res = await api.put("/user/profile", data);
             router.push("/userProfile")
-            
+
         } catch (error) {
             console.log(error);
         }
@@ -75,10 +75,10 @@ function InputsUserInformation() {
         <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
 
             <div>
-                <input className={`${errors.fullName?styles.error:""}`} placeholder="نام و نام خانوادگی" {...register("fullName")} />
+                <input className={`${errors.fullName ? styles.error : ""}`} placeholder="نام و نام خانوادگی" {...register("fullName")} />
             </div>
             <div>
-                <input className={`${errors.nationalCode?styles.error:""}`} placeholder="کد ملی" {...register("nationalCode")} />
+                <input className={`${errors.nationalCode ? styles.error : ""}`} placeholder="کد ملی" {...register("nationalCode")} />
             </div>
             <div>
                 <Controller
@@ -106,7 +106,7 @@ function InputsUserInformation() {
                 <select
                     id="gender"
                     {...register('gender')}
-                    className={`${styles.select} ${errors.gender?styles.error:""}`}
+                    className={`${styles.select} ${errors.gender ? styles.error : ""}`}
                 >
                     <option value="">جنسیت</option>
                     <option value="male">آقا</option>
@@ -117,10 +117,12 @@ function InputsUserInformation() {
             </div>
 
 
+            <div className={styles.buttons}>
 
-            <button type="submit" className={styles.submit}>تایید</button>
-            <button type="button" onClick={backHandler} className={styles.cancel}>انصراف</button>
-            
+                <button type="submit" className={styles.submit}>تایید</button>
+                <button type="button" onClick={backHandler} className={styles.cancel}>انصراف</button>
+            </div>
+
         </form>
 
     )

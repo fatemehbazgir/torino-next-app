@@ -73,8 +73,11 @@ function BankAccountInformation() {
 
 
 
-            <button type="submit" className={styles.submit}>تایید</button>
-            <button type="button" onClick={backHandler} className={styles.cancel}>انصراف</button>
+            <div className={styles.buttons}>
+                <button type="submit" className={styles.submit}>تایید</button>
+                <button type="button" onClick={backHandler} className={styles.cancel}>انصراف</button>
+            </div>
+
             <Toaster />
         </form>
 

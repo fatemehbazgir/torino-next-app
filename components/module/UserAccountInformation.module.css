@@ -49,3 +49,18 @@
 .error:focus {
   border-color: #c0392b !important;
 }
+
+@media (max-width: 390px) {
+  .container {
+  margin-bottom: 14px;
+}
+  .form input {
+  width: 186px;
+  height: 40px;
+  margin-left: 12px;
+}
+.form button {
+  width: 93px;
+  height: 40px;
+}
+}

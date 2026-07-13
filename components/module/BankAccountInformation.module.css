@@ -28,6 +28,9 @@
 .form input:focus {
   outline: none;
 }
+.buttons {
+  display: flex;
+}
 .form button {
   position: relative;
   top: 61;
@@ -53,4 +56,22 @@
   border: 2px solid rgba(40, 167, 69, 1);
   background: rgba(255, 255, 255, 1);
   color: rgba(40, 167, 69, 1);
+}
+
+@media (max-width: 390px) {
+  .form {
+    padding: 0 14px 42px;
+  }
+  .form input {
+    width: 299px;
+    height: 40px;
+  }
+  .form button {
+    display: flex;
+    position: relative;
+    top: 18;
+    right: 1;
+    width: 142px;
+    height: 41px;
+  }
 }

@@ -34,11 +34,11 @@ async function page() {
           </div>
         </div>
         <div className={styles.inputsUserInformation}>
-          <p className={styles.title}>اطلاعات شخصی</p>
+          <p className={styles.title}>ویرایش اطلاعات شخصی</p>
           <InputsUserInformation />
         </div>
         <div className={styles.bankAccountInformation}>
-          <p className={styles.title}>اطلاعات حساب بانکی</p>
+          <p className={styles.title}>ویرایش اطلاعات حساب بانکی</p>
           <BankAccountInformation />
         </div>
       </div>
