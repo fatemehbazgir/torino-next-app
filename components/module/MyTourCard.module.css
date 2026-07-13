@@ -48,22 +48,23 @@
   margin: 20px 0 0 40px;
 }
 .secondLine div P:first-child {
+  width: 130px;
+  display: flex;
+  justify-content: space-between;
   font-weight: 600;
   font-size: 15px;
   color: rgba(0, 0, 0, 1);
 }
-.dot {
-  display: inline-block;
-  margin-right: 15px;
-  margin-left: 15px;
-  font-size: 10px;
-  color: rgba(0, 0, 0, 0.6);
-}
+
 .secondLine div p:last-child {
   font-family: var(--font-vazir);
   font-weight: 400;
   font-size: 15px;
   color: rgba(0, 0, 0, 0.6);
+  margin-right: 15px;
+}
+.secondLine div p span {
+  padding-right: 15px;
 }
 .group {
   width: 398px;
@@ -72,27 +73,68 @@
   width: 100%;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
-.thirdLine{
-    display: flex;
+.thirdLine {
+  display: flex;
+  margin: 14px;
+}
+.thirdLine span:first-child {
+  font-weight: 400;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-left: 10px;
+  font-family: var(--font-vazir);
+}
+.groupOne {
+  width: 365px;
+}
+.payment {
+  display: flex;
+}
+.unit {
+  font-weight: 300 !important;
+  font-size: 10px !important;
+  margin-right: 2px !important;
+}
 
+@media (max-width: 390px) {
+  .container {
+    width: 328px;
+    margin: auto;
+    margin-bottom: 25px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .firstLine .status {
+    width: 117px;
+    height: 15px;
+    font-size: 6px;
+  }
+  .group {
+    margin-top: 20px;
+  }
+  .secondLine {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
     margin: 14px;
-}
-.thirdLine span:first-child{
-    font-weight: 400;
-    font-size: 15px;
-    color: rgba(0, 0, 0, 0.5);
-    margin-left: 10px;
-    font-family: var(--font-vazir);
-
-}
-.groupOne{
-    width: 365px;
-}
-.payment{
+  }
+  .secondLine div p:last-child {
+    font-size: 14px;
+    margin-right: 9px;
+  }
+  .groupOne {
+    width: 130px;
+  }
+  .thirdLine {
     display: flex;
-}
-.unit{
-    font-weight: 300 !important;
-    font-size: 10px !important;
-    margin-right: 2px !important;
+    align-items: center;
+    line-height: 100%;
+    margin: 14px;
+  }
+
+  .thirdLine span:first-child {
+    font-size: 10px;
+    margin-left: 10px;
+  }
 }

@@ -20,7 +20,7 @@ function Sidebar() {
             </div>
             <span className={styles.line}></span>
             <div className={`${styles.items} ${isActive("/myTours") ? styles.activeItem : ""} `}>
-                <Image src={getIcon(`/transactions`, `/images/sun-fog.png`, `/images/sun-fog (1).png`)} width={20} height={20} alt="myTour" />
+                <Image src={getIcon(`/transactions`, `/images/sun-fog (1).png`, `/images/sun-fog.png`)} width={20} height={20} alt="myTour" />
                 <Link href="/myTours">تور های من</Link>
             </div>
             <span className={styles.line}></span>

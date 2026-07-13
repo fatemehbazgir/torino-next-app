@@ -68,13 +68,11 @@ function MyTourCard({ tourItem }) {
 
       <div className={styles.secondLine}>
         <div>
-          <p>{translateCity(tourItem.origin["name"])} به {translateCityDestination(tourItem.destination["name"])}</p>
-          <span className={styles.dot}>.</span>
+          <p>{translateCity(tourItem.origin["name"])} به {translateCityDestination(tourItem.destination["name"])}<span>.</span></p>
           <p>{formatDateCustom(tourItem.startDate)}</p>
         </div>
         <div className={styles.group}>
-          <p>تاریخ برگشت</p>
-          <span className={styles.dot}>.</span>
+          <p>تاریخ برگشت<span>.</span></p>
           <p>{formatDateCustom(tourItem.endDate)}</p>
         </div>
       </div>

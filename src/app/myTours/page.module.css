@@ -1,13 +1,30 @@
 .parent {
   display: flex;
-  width: 1188px;
+  width: 1111px;
   margin: auto;
   padding-top: 30px;
   padding-bottom: 80px;
 }
-.container{
-    width: 872px;
-    border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 12px 16px;
+.container {
+  width: 872px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+}
+
+@media (max-width: 390px) {
+  .parent {
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+    margin: auto;
+    padding: 30px 30px 60px;
+  }
+  .container {
+  width: 328px;
+  margin: auto;
+  border-radius:0;
+  border: none;
+  padding: 0;
+}
 }
