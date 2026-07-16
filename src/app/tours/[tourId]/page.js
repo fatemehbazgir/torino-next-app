@@ -52,7 +52,7 @@ let detailTour=null;
             <div className={styles.container}>
                 <div className={styles.detailsTour}>
                     <div className={styles.imageTour}>
-                        <Image src={detailTour.image} unoptimized width={397} height={265} alt="tour image" />
+                        <Image src={detailTour.image} unoptimized width={328} height={265} alt="tour image" />
                     </div>
                     <div className={styles.leftDetailsTour}>
                         <div className={styles.firstDetails}>
@@ -81,30 +81,30 @@ let detailTour=null;
                     </div>
                 </div>
                 <div className={styles.detailsBottom}>
-                    <div className={styles.containerContent}>
+                    <div className={`${styles.containerContent} ${styles.display}`}>
                         <div className={styles.descriptionDetailsBottom}>
                             <Image src="/images/routing-2.png" width={20} height={20} alt="origin" />
                             <p className={styles.subContainerContent}>مبدا</p>
                         </div>
                         <p>{translateCity(detailTour.origin["name"])}</p>
                     </div>
-                    <Image src="/images/Line 14.png" width={1} height={84} alt="line" />
-                    <div className={styles.containerContent}>
+                    <Image className={styles.display} src="/images/Line 14.png" width={1} height={84} alt="line" />
+                    <div className={`${styles.containerContent} ${styles.display}`}>
                         <div className={styles.descriptionDetailsBottom}>
                             <Image src="/images/calendar (1).png" width={20} height={20} alt="calender" />
                             <p className={styles.subContainerContent}>تاریخ رفت</p>
                         </div>
                         <p>{startDate.toLocaleDateString("fa", startOptions)}</p>
                     </div>
-                    <Image src="/images/Line 14.png" width={1} height={84} alt="line" />
-                    <div className={styles.containerContent}>
+                    <Image className={styles.display} src="/images/Line 14.png" width={1} height={84} alt="line" />
+                    <div className={`${styles.containerContent} ${styles.display}`}>
                         <div className={styles.descriptionDetailsBottom}>
                             <Image src="/images/calendar-2.png" width={20} height={20} alt="calender" />
                             <p className={styles.subContainerContent}>تاریخ برگشت</p>
                         </div>
                         <p>{endDate.toLocaleDateString("fa", startOptions)}</p>
                     </div>
-                    <Image src="/images/Line 14.png" width={1} height={84} alt="line" />
+                    <Image className={styles.display} src="/images/Line 14.png" width={1} height={84} alt="line" />
                     <div className={styles.containerContent}>
                         <div className={styles.descriptionDetailsBottom}>
                             <Image src="/images/bus.png" width={20} height={20} alt="bus icon" />
@@ -118,7 +118,7 @@ let detailTour=null;
                                             ? "آفرودی" : null}
                         </p>
                     </div>
-                    <Image src="/images/Line 14.png" width={1} height={84} alt="line" />
+                    <Image className={styles.display} src="/images/Line 14.png" width={1} height={84} alt="line" />
                     <div className={styles.containerContent}>
                         <div className={styles.descriptionDetailsBottom}>
                             <Image src="/images/profile-2user.png" width={20} height={20} alt="capacity" />
@@ -126,7 +126,7 @@ let detailTour=null;
                         </div>
                         <p className={styles.subContainerContent}>حداکثر {detailTour.availableSeats} نفر</p>
                     </div>
-                    <Image src="/images/Line 14.png" width={1} height={84} alt="line" />
+                    <Image className={styles.display} src="/images/Line 14.png" width={1} height={84} alt="line" />
                     <div className={styles.containerContent}>
                         <div className={styles.descriptionDetailsBottom}>
                             <Image src="/images/security.png" width={20} height={20} alt="security" />

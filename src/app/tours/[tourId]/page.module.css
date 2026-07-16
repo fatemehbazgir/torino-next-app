@@ -110,3 +110,118 @@
   font-size: 16px;
   color: rgba(0, 0, 0, 1);
 }
+
+@media (max-width: 390px) {
+  .background {
+    background: #fff;
+    padding-bottom: 20px;
+  }
+  .container {
+    width: 328px;
+    height: auto;
+    margin: auto;
+    border: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .container .detailsTour {
+    display: flex;
+    flex-direction: column;
+  }
+  .imageTour {
+    margin-left: 18px;
+  }
+  .imageTour img {
+    border-radius: 12px;
+  }
+  .leftDetailsTour {
+    display: flex;
+    flex-direction: column;
+  }
+  .detailsBottom{
+    display: flex;
+    justify-content: space-between;
+    width: 328px;
+  }
+  .firstDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+  }
+  .firstDetails p:first-child {
+    font-size: 24px;
+  }
+  .firstDetails p:last-child {
+    font-size: 15px;
+  }
+  .display{
+    display: none;
+  }
+  .display div{
+    display: none;
+  }
+  .display p{
+    display: none;
+  }
+
+  .secondDetails div img {
+    width: 14px;
+    height: 14px;
+  }
+  .secondDetails div p {
+    font-size: 13px;
+  }
+  .reservation {
+    width: 328px;
+    margin-left: 14px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  .reservation span {
+    font-size: 28px;
+    font-family: var(--font-vazir);
+    font-weight: 500;
+    color: rgba(0, 158, 202, 1);
+  }
+  .reservation p {
+    font-family: var(--font-vazir);
+    font-weight: 200;
+    font-size: 14px;
+    color: rgba(40, 40, 40, 0.8);
+  }
+
+  .containerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .detailsBottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+
+  .descriptionDetailsBottom {
+    display: flex;
+    margin-bottom: 8px;
+  }
+  .descriptionDetailsBottom img {
+    margin-left: 6px;
+  }
+  .descriptionDetailsBottom p {
+    font-family: var(--font-vazir);
+    font-weight: 400;
+    font-size: 18px;
+    color: rgba(68, 68, 68, 1);
+  }
+  .subContainerContent {
+    font-size: 14px;
+  }
+  .containerContent p{
+    font-size: 14px;
+  }
+}

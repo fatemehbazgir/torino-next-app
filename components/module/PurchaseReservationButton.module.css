@@ -12,3 +12,14 @@
   border: none;
   cursor: pointer;
 }
+@media (max-width: 390px){
+  .reservation{
+  width: 154px;
+  height: 42px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 100%;
+}
+}
