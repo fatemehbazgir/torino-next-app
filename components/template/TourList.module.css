@@ -3,14 +3,16 @@
   margin-bottom: 90px;
 }
 .tours .title {
-  margin: 16px 98px;
+  width: 1111px;
+  margin: auto;
+  margin-bottom: 16px;
   font-weight: 400;
   font-size: 32px;
   line-height: 100%;
   color: rgba(0, 0, 0, 1);
 }
 .container {
-  width: calc(100% - 180px);
+  width: 1111px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
