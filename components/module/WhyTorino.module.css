@@ -72,10 +72,60 @@
   font-size: 26px;
   color: rgba(40, 40, 40, 1);
 }
-.subGuid div p:last-child{
+.subGuid div p:last-child {
   font-family: var(--font-vazir);
   font-weight: 200;
   font-size: 16px;
   color: rgba(40, 40, 40, 1);
+}
 
+@media (max-width: 390px) {
+  .container {
+    width: 328px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .whyTorino {
+    margin-bottom: 30px;
+  }
+  .whyTorino .question {
+    width: 34px;
+    height: 38px;
+    font-size: 24px;
+  }
+  .whyTorino .title {
+    font-size: 24px;
+  }
+  .container .description {
+    display: none;
+  }
+  .guide {
+    width: 1188px;
+    padding: 20px 0 20px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .subGuid {
+    display: flex;
+    align-items: center;
+  }
+  .subGuid div {
+    width: 248px;
+    margin-right: 8px;
+  }
+  .subGuid div p:first-child {
+    font-family: var(--font-vazir);
+    font-weight: 500;
+    font-size: 26px;
+    color: rgba(40, 40, 40, 1);
+  }
+  .subGuid div p:last-child {
+    font-family: var(--font-vazir);
+    font-weight: 200;
+    font-size: 16px;
+    color: rgba(40, 40, 40, 1);
+  }
 }

@@ -24,7 +24,7 @@ export default async function Home() {
 
     <div>
       <div className={styles.banner}>
-        <Image src="/images/banner.png" width={1228} height={350} alt='banner' />
+        <Image src="/images/banner.png" width={1351} height={350} alt='banner' />
       </div>
       <SearchForm />
       <HydrationBoundary state={dehydrate(queryClient)}>

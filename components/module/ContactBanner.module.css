@@ -2,7 +2,7 @@
   width: 1111px;
   height: 251px;
   margin: auto;
- margin-bottom: 120px;
+  margin-bottom: 120px;
   position: relative;
 }
 .callInformation {
@@ -36,4 +36,24 @@
   font-size: 16px;
   text-align: center;
   color: rgba(255, 255, 255, 1);
+}
+.banner {
+  display: none;
+}
+@media (max-width: 390px) {
+  .container {
+    width: 328px;
+    height: 251px;
+    display: flex;
+    flex-direction: column;
+  }
+  .banner {
+    display: inline-block;
+  }
+  .contactBanner {
+    display: none;
+  }
+  .callInformation{
+    display: none;
+  }
 }

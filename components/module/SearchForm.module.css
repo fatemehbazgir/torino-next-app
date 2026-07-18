@@ -77,28 +77,51 @@
 
 @media (max-width: 390px) {
   .container {
-    align-items: center;
-    max-width: 390px;
-    text-align: center;
+    margin-top: 250px;
   }
   .container p {
     font-size: 16px;
   }
+  .container .title {
+    color: rgba(40, 167, 69, 1);
+  }
   .container form {
     width: 390px;
+    height: auto;
     display: flex;
-    flex-direction: column;
-  }
-  .container form div {
-    display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: none;
+    text-align: center;
   }
 
   .container form input {
-    border: none;
-    width: 200px;
-    padding: 8px;
-    border-left: 1px solid rgba(0, 0, 0, 0.2);
-    margin-left: 12px;
+    border-left: none;
+  }
+  .container .content {
+    display: flex;
+    flex-direction: column;
+  }
+  .content div:first-child {
+    width: 160px;
+    margin-left: 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 15px 18px 15px 10px;
+  }
+  .date {
+    width: 330px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 15px 18px 15px 10px;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 18px;
+  }
+  .search {
+    width: 338px;
+    height: 51px;
+    position: absolute;
+    left: 27px;
+    top: 188px;
   }
 }

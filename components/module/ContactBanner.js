@@ -8,7 +8,8 @@ import styles from "./ContactBanner.module.css"
 function ContactBanner() {
     return (
         <div className={styles.container}>
-            <Image src="/images/ContactBanner.png" width={1111} height={251} alt="contact banner" />
+            <Image  className={styles.contactBanner} src="/images/ContactBanner.png" width={1111} height={251} alt="contact banner" />
+            <Image className={styles.banner} src="/images/Group 45.png" width={328} height={251} alt="contact banner" />
             <div className={styles.callInformation}>
                 <div>
                     <p>{e2p("021-1840")}</p>

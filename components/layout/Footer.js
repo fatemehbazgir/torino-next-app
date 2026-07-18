@@ -4,7 +4,7 @@ import styles from "./Footer.module.css"
 function Footer() {
     return (
         <>
-        <hr style={{ border: 'none',width:"1188px",margin:"auto", height: '1px', backgroundColor: 'rgba(0, 0, 0, 0.2)' }}/>
+            <hr style={{ border: 'none', width: "1188px", margin: "auto", height: '1px', backgroundColor: 'rgba(0, 0, 0, 0.2)' }} />
             <div className={styles.footer}>
                 <div className={styles.rightFooter}>
                     <div>
@@ -24,8 +24,10 @@ function Footer() {
 
                 </div>
                 <div className={styles.leftFooter}>
-                    <Image src="/images/Torino-logo.png" width={146} height={44} alt="torino-logo" />
-                    <span>تلفن پشتیبانی: 8574-021</span>
+                    <div className={styles.support}>
+                        <Image src="/images/Torino-logo.png" width={146} height={44} alt="torino-logo" />
+                        <span>تلفن پشتیبانی: 8574-021</span>
+                    </div>
                     <div className={styles.logoBottomFooter}>
                         <Image src="/images/state-airline-f45c55b2 1.png" width={78} height={74} alt="state airline" />
                         <Image src="/images/passenger-rights-48368f81 1.png" width={71} height={74} alt="passenger logo" />

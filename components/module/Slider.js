@@ -19,7 +19,6 @@ export default function StackedSlider() {
                     {images.map((img, i) => {
                         let offset = i - index;
                         
-                        // منطق دایره‌ای شما (بدون تغییر)
                         if (offset > images.length / 2) {
                             offset -= images.length;
                         } else if (offset < -images.length / 2) {
@@ -40,15 +39,11 @@ export default function StackedSlider() {
                             currentZIndex = 10;
                         } else {
                             if (offset > 0) {
-                                // عکس‌های بعدی: به سمت چپ حرکت می‌کنند
                                 xPosition = -(offset * 45); 
                                 currentScale = 1 - (offset * 0.05); 
                                 currentOpacity = 1 - (offset * 0.15);
                                 currentZIndex = 10 - offset;
                             } else {
-                                // عکس‌های قبلی: 
-                                // اصلاح بسیار ظریف: استفاده از Math.abs برای ایجاد فاصله تصاعدی به سمت چپ
-                                // این باعث می‌شود offset -1 در جای مختلفی نسبت به offset -2 قرار بگیرد
                                 xPosition = -(Math.abs(offset) * 45); 
                                 currentScale = 1 - (Math.abs(offset) * 0.05);
                                 currentOpacity = 1 - (Math.abs(offset) * 0.15); 

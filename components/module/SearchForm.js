@@ -50,9 +50,7 @@ function SearchForm() {
                     <span>تاریخ</span>
                     <DatePicker  className="my-input-style" selected={date} range onChange={(date) => setDate(date)} accentColor="#28a745" />
 
-                    {/* <div>
-                        {errors.date && <span>لطفا تاریخ معتبر را وارد کنید</span>}
-                    </div> */}
+                    
                 </div>
 
                 <button className={styles.search} type="submit">جستجو</button>

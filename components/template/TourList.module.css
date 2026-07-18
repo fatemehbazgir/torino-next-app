@@ -18,3 +18,20 @@
   flex-wrap: wrap;
   gap: 20px;
 }
+
+@media (max-width: 390px){
+
+.tours .title {
+  width: 390px;
+  font-size: 20px;
+}
+.container {
+  width: 390px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+}
